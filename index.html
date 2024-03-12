@@ -5,23 +5,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My P5 Projects</title>
-    <link rel="stylesheet" href="bulma.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css"
+        integrity="sha512-HqxHUkJM0SYcbvxUw5P60SzdOTy/QVwA1JJrvaXJv4q7lmbDZCmZaqz01UPOaQveoxfYRv1tHozWGPMcuTBuvQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="content">
-        <ol>
-            <li>
-                <a href="./starfield/index.html">Starfield</a>
-            </li>
-            <li>
-                <a href="./snake/index.html">Snake</a>
-            </li>
-            <li>
-                <a href="./purple_rain/index.html">Purple Rain</a>
-            </li>
-        </ol>
+    <div class="container mt-6">
+        <a href="https://sbiswas-cv.glitch.me/" class="button">Home</a>
+        <div class="columns is-multiline">
+            <div class="column is-one-third" id="starfield-column">
+                <div class="card mt-3">
+                    <div class="card-image">
+                        <figure class="image is-16by9">
+                            <img class="poster" src="/starfield/canvas.png" alt="Startfield">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="is-4"><a href="./starfield/index.html" class="title">Starfield</a></p>
+                            </div>
+                        </div>
+
+                        <div class="content">
+                            <time datetime="2016-1-1">9 March 2024</time>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <script>
+        let files = [
+            ["starfield", "Starfield"]
+            ["snake", "Snake"],
+            ["purple_rain", "Purple Rain"],
+            ["space_invader", "Space Invader"],
+            ["lorentz_attractor", "Lorentz Attractor"]
+        ]
+        for (let i = 1; i < files.length; i++) {
+            var originalElement = $("#starfield-column");
+
+            var clonedElement = originalElement.clone();
+            clonedElement.attr("id", files[i][0] + "-column");
+            clonedElement.find(".title").text(files[i][1]);
+            clonedElement.find(".poster").attr("src", "./" + files[i][0] + "/canvas.png")
+            clonedElement.find(".title").attr("href", "./" + files[i][0] + "/index.html");
+            originalElement.after(clonedElement);
+        }
+
+    </script>
+
 </body>
 
 </html>

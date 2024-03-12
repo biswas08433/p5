@@ -36,14 +36,3 @@ function draw() {
     element.show()
   });
 }
-
-// function setup() {
-//   frameRate(60);
-//   createCanvas(1280, 720);
-// }
-
-// function draw() {
-//   background(256);
-//   circle(250, 250, 10);
-// }
-

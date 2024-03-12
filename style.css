@@ -1,11 +1,10 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-  background: #201d27;
+html {
+  height: 100vh;
+  background-image: url(royal-gradient-background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 canvas {
-  display: block;
-  margin: 30px auto;
+  border: 3px solid white;
 }
