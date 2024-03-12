@@ -42,13 +42,12 @@
     </div>
     <script>
         let files = [
-            ["starfield", "Starfield"]
             ["snake", "Snake"],
             ["purple_rain", "Purple Rain"],
             ["space_invader", "Space Invader"],
             ["lorentz_attractor", "Lorentz Attractor"]
         ]
-        for (let i = 1; i < files.length; i++) {
+        for (let i = 0; i < files.length; i++) {
             var originalElement = $("#starfield-column");
 
             var clonedElement = originalElement.clone();
